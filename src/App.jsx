@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import React from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import ActivitySection from './components/ActivitySection'
+import FeaturesSection from './components/FeaturesSection'
+import DownloadSection from './components/DownloadSection'
+import AssuranceSection from './components/AssuranceSection'
+import Testimonial from './components/Testimonial'
+import CompanyLogos from './components/CompanyLogos'
+import NewsletterSection from './components/NewsletterSection'
+import Footer from './components/Footer'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className='z-3 bg-[#00040F] text-white relative min-h-screen overflow-x-hidden'>
+    <div className=' -z-10 absolute top-[252px] -left-50 w-[500px] h-[500px] bg-gradient-to-tr from-white/20 to-green-50/10 rounded-full blur-[100px]'></div>
+    <div className=' -z-10 absolute top-[90px] left-[998px] w-[500px] h-[500px] bg-gradient-to-tr from-white to-green-50 rounded-full blur-[750px]'></div>
+    <div className='overflow-hidden '>
+    <Navbar/>
+    <Hero />
+    <ActivitySection />
+    <FeaturesSection />
+    <DownloadSection />
+    <AssuranceSection />
+    <Testimonial />
+    <CompanyLogos />
+    <NewsletterSection />
+    <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </main>
   )
 }
 
